@@ -1,0 +1,15 @@
+/*Los archivos de base deben ser cargados antes que los de componentes, ya que primero se deben definir las variables y luego se aplican valores*/
+
+@import './base/var';
+
+@import './base/list';
+
+@import './componentes/banner';
+
+@import './componentes/nav';
+
+@import './componentes/contenedores';
+
+@import './componentes/contenedores2';
+
+@import './componentes/footer';
