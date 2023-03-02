@@ -1,0 +1,36 @@
+/*componente solo una parte*/
+body{
+	header{
+		background: rgb(34,186,203);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		.header-section{
+			.menu{
+				list-style: none;
+				background: rgb(34,186,203);
+				padding: 0px;
+				margin: 0px;
+				width: 100%;
+				font-size: nth($list: $f-size, $n: 3);
+				li{
+					display: inline-block;
+					text-align:center;
+					a{
+						text-decoration: none;
+						color: $fc-white;
+						padding: 0px;
+						margin: 0px;
+						display: block;
+						transition: all 0.2s;
+						&:hover{
+							background: lightseagreen;
+							padding: 0px;
+							margin: 0px;
+							width: 100%;
+							transform: scale(1.2);
+						}
+					}
+				}
+			}
+		}
+	}
+}

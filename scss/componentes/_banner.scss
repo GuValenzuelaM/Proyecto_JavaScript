@@ -1,0 +1,23 @@
+/*componente solo una parte*/
+
+.banner{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	img{
+		height: 100px;	
+		width: 100%;
+		object-fit: cover;
+	}
+
+	/*GRADIENTES*/
+	background:whitesmoke;
+}
+
+@media (orientation: portrait) and (min-width:500px) and (max-width:800px){
+	.banner{
+		flex-direction: column;
+	}
+
+}

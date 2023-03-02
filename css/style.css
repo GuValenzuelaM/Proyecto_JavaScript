@@ -1,3 +1,451 @@
-/*Los archivos de base deben ser cargados antes que los de componentes, ya que primero se deben definir las variables y luego se aplican valores*/
+/*Los archivos de base deben ser cargados antes que los de componentes, ya que primero se deben definir las variables y luego se aplican valores*/ /*base afecta todo
+css lee de arriba hacia abajo*/
+/*BACKGROUND*/
+/*FONT COLOR*/
+/*FONT*/
+/*componente solo una parte*/
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*GRADIENTES*/
+  background: whitesmoke;
+}
+.banner img {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (orientation: portrait) and (min-width: 500px) and (max-width: 800px) {
+  .banner {
+    flex-direction: column;
+  }
+}
+/*componente solo una parte*/
+body header {
+  background: rgb(34, 186, 203);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+body header .header-section .menu {
+  list-style: none;
+  background: rgb(34, 186, 203);
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  font-size: 16px;
+}
+body header .header-section .menu li {
+  display: inline-block;
+  text-align: center;
+}
+body header .header-section .menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  transition: all 0.2s;
+}
+body header .header-section .menu li a:hover {
+  background: lightseagreen;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: #b1deed;
+}
+footer div div div {
+  background-color: #b7cdd6;
+  padding: 10px;
+}
+footer div div div h4 {
+  color: #9c9c9c;
+}
+footer div div div ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+footer div div div ul li a {
+  text-decoration: none;
+  color: #9c9c9c;
+  font-size: 18px;
+}
+
+/*componente solo una parte*/
+body {
+  background-color: whitesmoke;
+}
+body main {
+  background-color: whitesmoke;
+}
+body main h1 {
+  padding-top: 20px;
+  font-family: system-ui;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: arial;
+  margin-top: 5px;
+  text-align: center;
+  justify-content: center;
+}
+body main h2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: lightblue;
+}
+body main section {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+body main section .products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+body main section .products .card {
+  background: rgb(34, 186, 203);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  width: 100%;
+}
+body main section .products .card h3 {
+  font-family: system-ui;
+  text-decoration: none;
+  background: rgb(34, 186, 203);
+  padding: 9px 23px;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+body main section .products .card div img {
+  z-index: -1;
+}
+body main section .products .card div p {
+  justify-content: center;
+  font-family: system-ui;
+  text-decoration: none;
+  background: rgb(34, 186, 203);
+  padding: 9px 23px;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+body main section .products .card a {
+  font-family: system-ui;
+  text-decoration: none;
+  background: lightseagreen;
+  padding: 9px 23px;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+body {
+  background: rgb(238, 238, 238);
+  background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(238, 238, 238) 0%, rgb(224, 238, 237) 50%, rgb(238, 238, 238) 100%);
+}
+body .formulario {
+  margin: 20px;
+}
+body .formulario form {
+  background-color: lightcyan;
+  border-radius: 4px;
+  border-color: black;
+  border-style: groove;
+  width: 400px;
+}
+body .formulario form h1 {
+  justify-content: center;
+  text-align: center;
+}
+body .formulario form .input-control {
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+body .formulario form .input-control label {
+  justify-content: center;
+}
+body .formulario form .input-control input {
+  border: 2px;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+body .formulario form .input-control inputfocus {
+  outlone: 0;
+}
+body .formulario form .botones {
+  text-align: center;
+  justify-content: center;
+  padding-left: 35px;
+  display: flex;
+  flex-direction: column;
+}
+body .formulario form .botones button {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  color: white;
+  background-color: rgb(15, 186, 178);
+  border: none;
+  border-radius: 4px;
+}
+
+/*NO USADO
+
+.input-control.success input{
+    border-color: green;
+}
+
+.input-control.error input{
+    border-color: red;
+}
+*/
+body {
+  font-family: system-ui;
+}
+
+header {
+  background-color: lightseagreen;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  box-shadow: 0 7px 8px -3px grey;
+  width: 100%;
+  margin-top: -10px;
+  z-index: 99;
+}
+
+.container {
+  max-width: 1200px;
+  text-align: center;
+  margin: auto;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  position: relative;
+}
+
+.header-section .menu {
+  list-style: none;
+  background: lightseagreen;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.header-section .menu li {
+  display: inline-block;
+  text-align: center;
+}
+
+.header-section .menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  transition: all 0.2s;
+}
+
+.header-section .menu li a:hover {
+  background: rgb(30, 206, 197);
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  transform: scale(1.2);
+}
+
+.header-section p {
+  top: 35px;
+  right: -8px;
+  background-color: #fff;
+  padding: 1px 6px;
+  border-radius: 50%;
+  color: red;
+  font-weight: 700;
+  font-family: system-ui;
+  line-height: 18px;
+}
+
+.logo {
+  width: 164px;
+  height: 84px;
+  cursor: pointer;
+}
+
+.cart {
+  width: 39px;
+  height: 38px;
+}
+
+.cart-products {
+  z-index: 1;
+  position: fixed;
+  top: 82px;
+  right: -18px;
+  background-color: #fff;
+  padding: 0 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  min-width: 290px;
+}
+
+.cart:hover {
+  margin-bottom: 16px;
+  transition-duration: 0.5s;
+}
+
+/*end header*/
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.carts {
+  max-width: 250px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding-bottom: 34px;
+  margin-bottom: 40px;
+}
+
+.carts img {
+  width: 100%;
+}
+
+.carts p {
+  font-family: system-ui;
+  font-weight: 500;
+  padding: 0 20px;
+  margin-bottom: 24px;
+}
+
+.carts div p {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background-color: rgb(0, 235, 129);
+  color: #fff;
+  padding: 2px 7px 4px 21px;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+.carts div {
+  position: relative;
+}
+
+.carts a {
+  font-family: system-ui;
+  text-decoration: none;
+  background: red;
+  padding: 9px 23px;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.carts a:hover {
+  background: #fff;
+  color: red;
+  border: solid 2px red;
+  transition-duration: 0.3s;
+}
+
+/*float cart*/
+.cart-products .item img {
+  width: 115px;
+}
+
+.cart-products .item {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 2px lightseagreen;
+}
+
+.cart-products .item .item-content {
+  margin: 0 19px;
+  width: 201px;
+}
+
+.cart-products .item .item-content h5 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: system-ui;
+}
+
+.cart-products .item .item-content h6 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: system-ui;
+}
+
+.cart-products .item span {
+  background-color: lightseagreen;
+  padding: 0px 7px;
+  border-radius: 50%;
+  color: #fff;
+  font-family: system-ui;
+  cursor: pointer;
+}
+
+.cart-products h3 {
+  margin-bottom: 0;
+}
+
+.cart-products .item .item-content h5.cart-price {
+  font-weight: 700;
+}
+
+/*stye to btn close*/
+p.close-btn {
+  top: -4px;
+  right: 6px;
+  cursor: pointer;
+  color: #000;
+}
+
+p.author {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  gap: 7px;
+}
+
+p.author a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+}
 
 /*# sourceMappingURL=style.css.map */

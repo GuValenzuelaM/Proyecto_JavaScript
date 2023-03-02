@@ -1,0 +1,84 @@
+/*componente solo una parte*/
+
+body{
+   background-color: whitesmoke;
+    main{
+        background-color: whitesmoke;
+        h1{
+            padding-top: 20px;
+            font-family: system-ui;
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            font-weight: 700;
+
+            font-family: arial;
+            margin-top: 5px;
+            text-align: center;
+            justify-content: center;
+        }
+        h2{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: lightblue;            
+        }
+        section{
+            padding-top: 40px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            .products{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 80px;
+                .card{
+                    background: rgb(34,186,203);
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                    max-width: 250px;
+                    margin: auto;
+                    text-align: center;
+                    font-family: arial;
+                    width: 100%;
+                    h3{
+                        font-family: system-ui;
+                        text-decoration: none;
+                        background: rgb(34,186,203);
+                        padding: 9px 23px;
+                        color: #fff;
+                        font-size: 17px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                    div{
+                        img{   
+                            z-index:-1;
+                        }
+                        p{
+                            justify-content: center;
+                            font-family: system-ui;
+                            text-decoration: none;
+                            background: rgb(34,186,203);
+                            padding: 9px 23px;
+                            color: #fff;
+                            font-size: 17px;
+                            text-transform: uppercase;
+                        }
+                    }
+                    a{
+                        font-family: system-ui;
+                        text-decoration: none;
+                        background:lightseagreen;
+                        padding: 9px 23px;
+                        color: #fff;
+                        font-size: 17px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                }
+            }    
+        }
+    }
+}

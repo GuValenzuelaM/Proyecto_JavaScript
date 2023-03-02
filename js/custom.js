@@ -45,7 +45,7 @@ function deleteProduct(e) {
         
         countProduct--;
     }
-    //FIX: El contador se quedaba con "1" aunque hubiese 0 productos
+    //FIX: El contador se quedaba con "1" aunque ubiera 0 productos
     if (buyThings.length === 0) {
         priceTotal.innerHTML = 0;
         amountProduct.innerHTML = 0;
@@ -96,8 +96,8 @@ function loadHtml(){
             <img src="${image}" alt="">
             <div class="item-content">
                 <h5>${title}</h5>
-                <h5 class="cart-price">Precio: $${price}</h5>
-                <h6>Cantidad: ${amount}</h6>
+                <h5 class="cart-price">${price}$</h5>
+                <h6>Amount: ${amount}</h6>
             </div>
             <span class="delete-product" data-id="${id}">X</span>
         `;
@@ -115,65 +115,3 @@ function loadHtml(){
  function clearHtml(){
     containerBuyCart.innerHTML = '';
  }
-
-
-
- //REGISTRO DE USUARIO (PESTAÑA ACCEDE)
-let arr_usuarios =[];
-
-function alta_usuario(){
-    //let nombre_usuario = document.getElementById("nombre");
-    //let apellido_usuario = document.getElementById("apellido");
-    let correo_usuario = document.getElementById("correo");
-    let pass_usuario = document.getElementById("pass");
-
-    //console.log(nombre_usuario);
-    //console.log(apellido_usuario);
-    console.log(correo_usuario);
-    console.log(pass_usuario);
-
-    //ARREGLO USUARIO
-    let usuario={correo:corre_usuario.value , password:pass_usuario.value};
-
-    //CONVERSIÓN A JSON (STRING)
-    
-    arr_usuarios.push(usuario);
-    let arreglo_JSON =JSON.stringify(arr_usuarios);
-    localStorage.setItem("arr_usuarios" , arr_usuarios);
-
-
-    //RECUPERANDO USUARIOS
-    let recuperando_usuarios = localStorage.getItem("arr_usuarios");
-    recuperando_usuarios =json.parse(recuperando_usuarios);
-    console.log(recuperando_usuarios);
-}
-
-function login_usuario(){
-
-    let arr_usuarios =localStorage.getItem("arr_usuarios");
-
-    let correo_usuario = document.getElementById("correo");
-    let pass_usuario = document.getElementById("pass");
-
-    arr_usuarios = JSON.parse(arr_usuarios);
-
-    for (let usuario of arr_usuarios){
-
-        if(correo_usuario.value ==usuario.correo && pass_usuario.value ==usuario.password){
-            //DUDA, NO SE COMO REDIRECCIONAR
-            location.href = './index.html'
-            break;
-        }
-        else{
-            console.log("Usuario no registrado");
-        }
-    }
-}
-
-
-let btn_registro= document.getElementById("btn_registro");
-let btn_login= document.getElementById("btn_login");
-
-btn_registro.addEventListener("click" ,alto_usuario );
-
-btn_login.addEventListener("click" ,login_usuario);
