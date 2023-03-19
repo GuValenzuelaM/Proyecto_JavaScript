@@ -9,6 +9,13 @@
     <!-- Keywords, Chrome no las usa (18 tags son suficientes #tags)-->
     <meta name="keywords" content="CoderHosue JavaScript">
     
+    <!--LIBRERÍAS-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+
+    <!--ANIMACIONES-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <!-- Entre 35 y 65 caracteres -->
     <title>Proyecto JavaScript CoderHosue</title>
 
@@ -27,6 +34,9 @@
     <!--ICONO PÁGINA WEB-->
     <link rel="shortcut icon" href="./img/icono.png" type="image/x-icon">
 
+    <!--API CLIMA-->
+
+
     <!--BANNER INICIAL + BARRA DE NAVEGACIÓN-->
     <a class="banner" href="./img/Banner.jpg"><img src="./img/Banner.jpg" Logo Clinica Dental></a>
 
@@ -44,21 +54,21 @@
 
                 <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="./html/nosotros.html">Nosotros</a></li>
 
-                <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="./html/inicio.html">Accede</a></li>
+                <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="./html/login.html">Accede</a></li>
             </ul>
             <div>
                 <img onclick="showCart(this)" class="cart" src="./img/bolsaicono.png" alt="">
                 <p class="count-product">0</p>
             </div>
             <div class="cart-products" id="products-id">
-                <p class="close-btn" onclick="closeBtn()">X</p>
+                <p class="close-btn" onclick="closeBtn()">Cerrar</p>
                 <h3>Bolsa de Compras</h3>
                 <div class="card-items">
                     <!-- <div class="item">
                         <img src="./images/products/keyboard-1.jpg" alt="">
                         <div class="item-content">
                             <h5>name of product name of product name of product</h5>
-                            <h5 class="cart-price">45.50$</h5>
+                            <h5 class="cart-price">10$</h5>
                             <h6>Amount: 3</h6>
                         </div>
                         <span>X</span>
@@ -68,7 +78,7 @@
                         <img src="./images/products/keyboard-1.jpg" alt="">
                         <div class="item-content">
                             <h5>name of product name of product name of product</h5>
-                            <h5 class="cart-price">45.50$</h5>
+                            <h5 class="cart-price">10$</h5>
                             <h6>Amount: 3</h6>
                         </div>
                         <span class="delete-product" data-id="">X</span>
@@ -81,54 +91,54 @@
     </header>
 
         <!--SERVICIOS CLINICA DENTAL Y ESTETICA-->
-        <main>
-            <h1>Nuestros Servicios</h1>
+        <main class="redental">
+            <h1>Atiendete con REDENTAL</h1>
             <section class="container">
                 <div class="products">
                     <div class="card">
                         <h3 class="title">Diagnostico</h3>
-                        <div>
-                            <img src="./img/limpieza.png" alt="diagnostico dental salud bucal" style="width:100%">
+                        <div class="prod_list">
+                            <img src="./img/producto1.png" alt="diagnostico dental salud bucal" style="width:100%">
                             <p>$<span>10</span></p>
                         </div>
                         <a href="" class="btn-add-cart" data-id="1" >Agregar</a>
                     </div>
                     <div class="card">
                         <h3 class="title">Limpieza</h3>
-                        <div>
-                            <img src="./img/limpieza.png" alt="diagnostico dental salud bucal" style="width:100%">
+                        <div class="prod_list">
+                            <img src="./img/producto2.png" alt="diagnostico dental salud bucal" style="width:100%">
                             <p>$<span>20</span></p>
                         </div>
                         <a href="" class="btn-add-cart" data-id="2">Agregar</a>
                     </div>
                     <div class="card">
                         <h3 class="title">Restauración</h3>
-                        <div>
-                            <img src="./img/limpieza.png" alt="diagnostico dental salud bucal" style="width:100%">
+                        <div class="prod_list">
+                            <img src="./img/producto3.jpg" alt="diagnostico dental salud bucal" style="width:100%">
                             <p>$<span>40</span></p>
                         </div>
                         <a href="" class="btn-add-cart" data-id="3">Agregar</a>
                     </div>
                     <div class="card">
                         <h3 class="title">Bótox</h3>
-                        <div>
-                            <img src="./img/limpieza.png" alt="diagnostico dental salud bucal" style="width:100%">
+                        <div class="prod_list">
+                            <img src="./img/producto4.jpg" alt="diagnostico dental salud bucal" style="width:100%">
                             <p>$<span>100</span></p>
                         </div>
                         <a href="" class="btn-add-cart" data-id="4" >Agregar</a>
                     </div>
                     <div class="card">
                         <h3 class="title">Ácido Hialuronico</h3>
-                        <div>
-                            <img src="./img/limpieza.png" alt="diagnostico dental salud bucal" style="width:100%">
+                        <div class="prod_list">
+                            <img src="./img/producto5.jpg" alt="diagnostico dental salud bucal" style="width:100%">
                             <p>$<span>180</span></p>
                         </div>
                         <a href="" class="btn-add-cart" data-id="5">Agregar</a>
                     </div>
                     <div class="card">
-                        <h3 class="title">Hilos Tensores</h3>
-                        <div>
-                            <img src="./img/limpieza.png" alt="diagnostico dental salud bucal" style="width:100%">
+                        <h3 class="title">Rinomodelación</h3>
+                        <div class="prod_list">
+                            <img src="./img/producto6.jpg" alt="diagnostico dental salud bucal" style="width:100%">
                             <p>$<span>130</span></p>
                         </div>
                         <a href="" class="btn-add-cart" data-id="6">Agregar</a>
@@ -138,8 +148,46 @@
         
 </body>
 
-<footer>
-    <p>PENDIENTE</p>
+<footer id="pie">
+    <div class="container mt-5">
+        <div class="iconos">
+            <div class="rrss"><img src="./img/facebook.png" alt=""></div>
+            <div class="rrss"><img src="./img/instagram.png" alt=""></div>
+            <div class="rrss"><img src="./img/youtube.png" alt=""></div>
+            <div class="rrss"><img src="./img/twitter.png" alt=""></div>
+            <div class="rrss"><img src="./img/linkedin.png" alt=""></div>
+        </div>
+        <div class="row mi-container">
+            <div class="col-lg-3 col-md-6 col-6">
+                <h4 id="author">Lorem ipsum</h4>
+                <p id="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sint.</p>
+                <button id="btn_quote">Nueva Cita</button>
+            </div>            
+            <div class="col-lg-3 col-md-6 col-6">
+                <h4>Acerca de Nosotros</h4>
+                <ul>
+                    <li><a target="_blank" href="https://www.falabella.com/falabella-cl/page/contactanos">Quiénes somos</a></li>
+                    <li><a target="_blank" href="https://www.falabella.com/falabella-cl/page/contactanos">Clinicas</a></li>
+                    <li><a target="_blank" href="https://www.falabella.com/falabella-cl/page/contactanos">Noticias</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+                <h4>Comunicate con Nosotros</h4>
+                <ul>
+                    <li><a target="_blank" href="https://www.falabella.com/falabella-cl/page/Vende-en-Falabella.com?mkid=LA_VI_VER_1000002626&staticPageId=42100010">Reserva de horas</a></li>
+                    <li><a target="_blank" href="https://investors.falabella.com/English/overview/default.aspx">Ubicación</a></li>
+                    <li><a target="_blank" href="https://investors.falabella.com/English/overview/default.aspx">Unete a nuestro equipo</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+                <h4>Acerca de este Sitio</h4>
+                <ul>
+                    <li><a target="_blank" href="https://www.bancofalabella.cl/cmr-puntos">Postula</a></li>
+                    <li><a target="_blank" href="https://www.noviosfalabella.com/noviosclpr/public/inicio.do">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> 
 </footer>
 
 

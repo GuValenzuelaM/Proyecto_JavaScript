@@ -1,0 +1,17 @@
+.gallery{
+  .row {
+  display: flex;
+  overflow-wrap: normal;
+  padding: 0 4px;
+  flex: 60%;
+  padding-top: 10px;
+  div{
+    img {
+      max-height: 450px;
+      max-height: 800px;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+  }
+}

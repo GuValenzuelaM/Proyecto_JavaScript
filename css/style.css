@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Los archivos de base deben ser cargados antes que los de componentes, ya que primero se deben definir las variables y luego se aplican valores*/ /*base afecta todo
 css lee de arriba hacia abajo*/
 /*BACKGROUND*/
@@ -42,7 +43,7 @@ body header .header-section .menu li {
 }
 body header .header-section .menu li a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   padding: 0px;
   margin: 0px;
   display: block;
@@ -57,33 +58,57 @@ body header .header-section .menu li a:hover {
 }
 
 footer {
-  background-color: #b1deed;
+  background-color: rgb(24, 198, 218);
 }
-footer div div div {
-  background-color: #b7cdd6;
+footer .container .iconos {
+  display: flex;
+  justify-content: space-around;
+}
+footer .container .iconos .rrss {
+  margin-top: 20px;
+}
+footer .container .iconos .rrss img {
+  width: 60px;
+  height: 60px;
+}
+footer .container div {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+footer .container div div {
   padding: 10px;
+  margin-top: 30px;
+  color: #fff;
 }
-footer div div div h4 {
-  color: #9c9c9c;
+footer .container div div a img {
+  max-height: 200px;
+  max-width: 200px;
+  width: 100%;
 }
-footer div div div ul {
+footer .container div div h6 {
+  font-size: 16px;
+}
+footer .container div div button {
+  font-size: 14px;
+}
+footer .container div div h4 {
+  color: #fff;
+  margin-top: 10px;
+}
+footer .container div div ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
+  margin-bottom: 80px;
 }
-footer div div div ul li a {
+footer .container div div ul li a {
   text-decoration: none;
-  color: #9c9c9c;
-  font-size: 18px;
+  color: #fff;
+  font-size: 16px;
 }
 
 /*componente solo una parte*/
-body {
-  background-color: whitesmoke;
-}
-body main {
-  background-color: whitesmoke;
-}
 body main h1 {
   padding-top: 20px;
   font-family: system-ui;
@@ -113,12 +138,12 @@ body main section {
 body main section .products {
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 40px;
 }
 body main section .products .card {
   background: rgb(34, 186, 203);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 250px;
+  max-width: 320px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -135,7 +160,9 @@ body main section .products .card h3 {
   font-weight: 700;
 }
 body main section .products .card div img {
+  height: 350px;
   z-index: -1;
+  object-fit: cover;
 }
 body main section .products .card div p {
   justify-content: center;
@@ -158,72 +185,6 @@ body main section .products .card a {
   font-weight: 700;
 }
 
-body {
-  background: rgb(238, 238, 238);
-  background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(238, 238, 238) 0%, rgb(224, 238, 237) 50%, rgb(238, 238, 238) 100%);
-}
-body .formulario {
-  margin: 20px;
-}
-body .formulario form {
-  background-color: lightcyan;
-  border-radius: 4px;
-  border-color: black;
-  border-style: groove;
-  width: 400px;
-}
-body .formulario form h1 {
-  justify-content: center;
-  text-align: center;
-}
-body .formulario form .input-control {
-  text-align: center;
-  justify-content: center;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-}
-body .formulario form .input-control label {
-  justify-content: center;
-}
-body .formulario form .input-control input {
-  border: 2px;
-  border-radius: 4px;
-  display: block;
-  padding: 10px;
-  width: 100%;
-}
-body .formulario form .input-control inputfocus {
-  outlone: 0;
-}
-body .formulario form .botones {
-  text-align: center;
-  justify-content: center;
-  padding-left: 35px;
-  display: flex;
-  flex-direction: column;
-}
-body .formulario form .botones button {
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%;
-  color: white;
-  background-color: rgb(15, 186, 178);
-  border: none;
-  border-radius: 4px;
-}
-
-/*NO USADO
-
-.input-control.success input{
-    border-color: green;
-}
-
-.input-control.error input{
-    border-color: red;
-}
-*/
 body {
   font-family: system-ui;
 }
@@ -268,7 +229,7 @@ header {
 
 .header-section .menu li a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   padding: 0px;
   margin: 0px;
   display: block;
@@ -309,8 +270,8 @@ header {
 .cart-products {
   z-index: 1;
   position: fixed;
-  top: 82px;
-  right: -18px;
+  top: 0px;
+  right: -10px;
   background-color: #fff;
   padding: 0 18px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -381,19 +342,27 @@ header {
 }
 
 /*float cart*/
-.cart-products .item img {
-  width: 115px;
-}
-
 .cart-products .item {
   display: flex;
   align-items: center;
   border-bottom: solid 2px lightseagreen;
 }
 
+.cart-products .close-btn {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: red;
+}
+
+.cart-products .item img {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+}
+
 .cart-products .item .item-content {
-  margin: 0 19px;
-  width: 201px;
+  width: 150px;
 }
 
 .cart-products .item .item-content h5 {
@@ -420,11 +389,22 @@ header {
 }
 
 .cart-products h3 {
-  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-right: 17px;
+  background: rgb(34, 186, 203);
+  font-family: system-ui;
+  color: #fff;
 }
 
 .cart-products .item .item-content h5.cart-price {
   font-weight: 700;
+}
+
+.card-items {
+  overflow-y: scroll;
 }
 
 /*stye to btn close*/
@@ -446,6 +426,113 @@ p.author a {
   text-decoration: none;
   font-weight: 700;
   color: #000;
+}
+
+body .formulario {
+  background-image: url("../img/fondo2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .formulario form {
+  background-color: lightcyan;
+  border-radius: 4px;
+  border-color: black;
+  border-style: groove;
+  width: 400px;
+}
+body .formulario form h1 {
+  justify-content: center;
+  text-align: center;
+}
+body .formulario form .input-control {
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+body .formulario form .input-control label {
+  justify-content: center;
+}
+body .formulario form .input-control input {
+  border: 2px;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+body .formulario form .input-control inputfocus {
+  outlone: 0;
+}
+body .formulario form .botones {
+  text-align: center;
+  justify-content: center;
+  padding-left: 35px;
+  display: flex;
+  flex-direction: column;
+}
+body .formulario form .botones button {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  color: white;
+  background-color: rgb(15, 186, 178);
+  border: none;
+  border-radius: 4px;
+}
+
+/*NO USADO
+
+.input-control.success input{
+    border-color: green;
+}
+
+.input-control.error input{
+    border-color: red;
+}
+*/
+/*PESTAÑAS NOSOTROS -GALERÍA*/
+body {
+  background-image: url("../img/fondo2.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+body main div {
+  background-color: whitesmoke;
+}
+body main div div div img {
+  max-width: 500px;
+  width: 100%;
+  max-height: 400px;
+  height: 100%;
+}
+body section div {
+  background-color: whitesmoke;
+}
+body section div div div img {
+  max-width: 500px;
+  width: 100%;
+  max-height: 400px;
+  height: 100%;
+}
+
+.gallery .row {
+  display: flex;
+  overflow-wrap: normal;
+  padding: 0 4px;
+  flex: 60%;
+  padding-top: 10px;
+}
+.gallery .row div img {
+  max-height: 450px;
+  max-height: 800px;
+  padding: 10px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

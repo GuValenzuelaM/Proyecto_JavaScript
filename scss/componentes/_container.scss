@@ -1,9 +1,9 @@
 /*componente solo una parte*/
 
 body{
-   background-color: whitesmoke;
+   
     main{
-        background-color: whitesmoke;
+        
         h1{
             padding-top: 20px;
             font-family: system-ui;
@@ -33,11 +33,11 @@ body{
             .products{
                 display: flex;
                 flex-wrap: wrap;
-                gap: 80px;
+                gap: 40px;
                 .card{
                     background: rgb(34,186,203);
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                    max-width: 250px;
+                    max-width: 320px;
                     margin: auto;
                     text-align: center;
                     font-family: arial;
@@ -53,8 +53,10 @@ body{
                         font-weight: 700;
                     }
                     div{
-                        img{   
+                        img{
+                            height: 350px;
                             z-index:-1;
+                            object-fit: cover;
                         }
                         p{
                             justify-content: center;

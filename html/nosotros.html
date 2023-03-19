@@ -3,12 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <!-- Descripciòn de META, debe tener entre 70 y 320 caracteres (optimo 80) -->
+    <meta name="description" content="Proyecto JavaScript CoderHouse">
+    <!-- Keywords, Chrome no las usa (18 tags son suficientes #tags)-->
+    <meta name="keywords" content="CoderHosue JavaScript">
+    
+    <!--LIBRERÍAS-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+
+    <!--ANIMACIONES-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Entre 35 y 65 caracteres -->
+    <title>Proyecto JavaScript CoderHosue</title>
+
+    <!-- TIPO DE FUENTE EXTRAIDA DE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    
+    <!--CARGA DE ANIMACIONES AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!--ICONO PÁGINA WEB-->
+    <link rel="shortcut icon" href="../img/icono.png" type="image/x-icon">
+
+    <!--BANNER INICIAL + BARRA DE NAVEGACIÓN-->
+    <a class="banner" href="../img/Banner.jpg"><img src="../img/Banner.jpg" Logo Clinica Dental></a>
+
 </head>
+
 <body>
-    <h1>NOSOTROS</h1>
+    <header>
+        <div class="header-section container">
+            <ul class="menu">
+                <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="../index.html">Inicio</a></li>
+
+                <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="./servicios.html">Servicios</a></li>
+
+                <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="./galeria.html">Galeria</a></li>
+
+                <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="./nosotros.html">Nosotros</a></li>
+
+                <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="./login.html">Accede</a></li>
+            </ul>
+            <div>
+                <img onclick="showCart(this)" class="cart" src="../img/bolsaicono.png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">Cerrar</p>
+                <h3>Bolsa de Compras</h3>
+                <div class="card-items">
+                    <!-- <div class="item">
+                        <img src="../images/products/keyboard-1.jpg" alt="">
+                        <div class="item-content">
+                            <h5>name of product name of product name of product</h5>
+                            <h5 class="cart-price">10$</h5>
+                            <h6>Amount: 3</h6>
+                        </div>
+                        <span>X</span>
+                    </div>
+    
+                    <div class="item">
+                        <img src="../images/products/keyboard-1.jpg" alt="">
+                        <div class="item-content">
+                            <h5>name of product name of product name of product</h5>
+                            <h5 class="cart-price">10$</h5>
+                            <h6>Amount: 3</h6>
+                        </div>
+                        <span class="delete-product" data-id="">X</span>
+                    </div> -->
+                </div>
+                <h2>Total: $<strong class="price-total">0</strong></h2>
+            </div>
+        </div>
+    </header>
+
+    <main class="presentation">    
+        <div class="container mt-5 border border-5 border-black">
+            <div class="row mi-container align-items-center justify-content-center text-center">
+                <div class="col-lg-12 col-md-12 col-12 pt-5 text-uppercase">
+                    <h1>¿Quiénes somos?</h1>
+                </div>
+                <div class="col-lg-7 col-md-12 col-12 p-5 overflow-auto">
+                    <a href="../img/grupo1.jpg"><img src="../img/Grupo1.jpg"
+                    alt="Equipo Salud Dental Sonrisas Familia"></a>
+                </div>
+                <div class="col-lg-5 col-md-12 col-12 p-5">
+                    <p>Somos una clínica dental estética que se dedica a transformar sonrisas y mejorar la salud dental de nuestros pacientes. Contamos con un equipo de profesionales altamente capacitados y experimentados en las últimas técnicas y tecnologías de odontología estética. Nos enorgullece brindar un servicio excepcional al cliente y crear un ambiente acogedor y relajado para nuestros pacientes. Nuestro objetivo es ofrecer tratamientos personalizados de alta calidad para mejorar la estética dental y, en última instancia, la calidad de vida de nuestros pacientes.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--SECCIONES-->
+    <section class="nosotros">
+        <!--CONTENEDOR 2-->
+        <div class="container mt-5 border border-5 border-black">
+            <div class="row mi-container align-items-center justify-content-center text-center">
+                <div class="col-lg-12 col-md-12 col-12 pt-2 pb-2 text-uppercase">
+                    <h2>Misión</h2>
+                </div>
+                <div class="col-lg-5 col-md-12 col-12 ps-5">
+                    <p>Transformar sonrisas y mejorar vidas con tratamientos dentales personalizados de alta calidad y atención excepcional al paciente.</p>
+                </div>
+                <div class="col-lg-7 col-md-12 col-12 pb-5 overflow-auto">
+                    <a href="../img/misión.jpg"><img src="../img/misión.jpg" alt="Misión Visión Dental Salud"></a>
+                </div>
+            </div>
+        </div>
+
+        <!--CONTENEDOR 3-->
+        <div class="container mt-5 border border-5 border-black">
+            <div class="row mi-container align-items-center justify-content-center text-center">
+                <div class="col-lg-12 col-md-12 col-12 pt-2 pb-2 text-uppercase">
+                    <h2>Visión</h2>
+                </div>
+                <div class="col-lg-7 col-md-12 col-12 pb-5 overflow-auto">
+                    <a href="../img/visión.jpg"><img src="../img/visión.jpg" alt="salud metro clinica cercano dental"></a>
+                </div>
+                <div class="col-lg-5 col-md-12 col-12 pe-5">
+                    <p>Ser la clínica dental estética líder en nuestro mercado, reconocida por ofrecer resultados estéticos superiores, innovación tecnológica y un servicio excepcional al cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
-<script src="./js/script.js"></script>
+
+<footer id="pie">
+    <div class="container mt-5">
+        <div class="iconos">
+            <div class="rrss"><img src="../img/facebook.png" alt=""></div>
+            <div class="rrss"><img src="../img/instagram.png" alt=""></div>
+            <div class="rrss"><img src="../img/youtube.png" alt=""></div>
+            <div class="rrss"><img src="../img/twitter.png" alt=""></div>
+            <div class="rrss"><img src="../img/linkedin.png" alt=""></div>
+        </div>
+        <div class="row mi-container">
+            <div class="col-lg-3 col-md-6 col-6">
+                <a class="img_logo" href="../img/icono.png"><img src="../img/icono.png" Logo Clinica Dental></a>
+
+            </div>            
+            <div class="col-lg-3 col-md-6 col-6">
+                <h4>Acerca de Nosotros</h4>
+                <ul>
+                    <li><a target="_blank" href="https://www.falabella.com/falabella-cl/page/contactanos">Quiénes somos</a></li>
+                    <li><a target="_blank" href="https://www.falabella.com/falabella-cl/page/contactanos">Clinicas</a></li>
+                    <li><a target="_blank" href="https://www.falabella.com/falabella-cl/page/contactanos">Noticias</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+                <h4>Comunicate con Nosotros</h4>
+                <ul>
+                    <li><a target="_blank" href="https://www.falabella.com/falabella-cl/page/Vende-en-Falabella.com?mkid=LA_VI_VER_1000002626&staticPageId=42100010">Reserva de horas</a></li>
+                    <li><a target="_blank" href="https://investors.falabella.com/English/overview/default.aspx">Ubicación</a></li>
+                    <li><a target="_blank" href="https://investors.falabella.com/English/overview/default.aspx">Unete a nuestro equipo</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+                <h4>Acerca de este Sitio</h4>
+                <ul>
+                    <li><a target="_blank" href="https://www.bancofalabella.cl/cmr-puntos">Postula</a></li>
+                    <li><a target="_blank" href="https://www.noviosfalabella.com/noviosclpr/public/inicio.do">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+</footer>
+
+<script>
+    function showCart(x){
+        document.getElementById("products-id").style.display = "block";
+    }
+    function closeBtn(){
+         document.getElementById("products-id").style.display = "none";
+    }
+
+</script>
+
+<script src="../js/script.js"></script>
 
 </html>

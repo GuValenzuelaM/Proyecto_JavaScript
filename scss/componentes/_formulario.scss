@@ -1,10 +1,14 @@
 
 
 body{
-    background: rgb(238,238,238);
-    background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 0%, rgba(224,238,237,1) 50%, rgba(238,238,238,1) 100%);
     .formulario{
-        margin: 20px;
+        background-image: url("../img/fondo2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         form{
             background-color: lightcyan;
             border-radius: 4px;

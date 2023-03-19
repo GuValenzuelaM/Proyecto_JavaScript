@@ -14,10 +14,6 @@
 
     <!--ANIMACIONES-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-    <!-- Entre 35 y 65 caracteres -->
-    <title>Proyecto JavaScript CoderHosue</title>
 
     <!-- TIPO DE FUENTE EXTRAIDA DE GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -40,6 +36,7 @@
 </head>
 
 <body>
+    <!--BARRA DE NAVEGACIÓN-->
     <header>
         <div class="header-section container">
             <ul class="menu">
@@ -51,62 +48,34 @@
 
                 <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="./nosotros.html">Nosotros</a></li>
 
-                <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="./login.html">Accede</a></li>
+                <li><a class="col-lg-2 col-md-2 col-2 p-5 text-uppercase" href="./inicio.html">Accede</a></li>
             </ul>
-            <div>
-                <img onclick="showCart(this)" class="cart" src="../img/bolsaicono.png" alt="">
-                <p class="count-product">0</p>
-            </div>
-            <div class="cart-products" id="products-id">
-                <p class="close-btn" onclick="closeBtn()">Cerrar</p>
-                <h3>Bolsa de Compras</h3>
-                <div class="card-items">
-                    <!-- <div class="item">
-                        <img src="../images/products/keyboard-1.jpg" alt="">
-                        <div class="item-content">
-                            <h5>name of product name of product name of product</h5>
-                            <h5 class="cart-price">10$</h5>
-                            <h6>Amount: 3</h6>
-                        </div>
-                        <span>X</span>
-                    </div>
-    
-                    <div class="item">
-                        <img src="../images/products/keyboard-1.jpg" alt="">
-                        <div class="item-content">
-                            <h5>name of product name of product name of product</h5>
-                            <h5 class="cart-price">10$</h5>
-                            <h6>Amount: 3</h6>
-                        </div>
-                        <span class="delete-product" data-id="">X</span>
-                    </div> -->
-                </div>
-                <h2>Total: $<strong class="price-total">0</strong></h2>
-            </div>
-        </div>
     </header>
 
-    <section class="gallery">
-        <div class="row"> 
-            <div class="col-lg-6 col-md-6 col-6">
-                <img src="../img/foto2.png">
-                <img src="../img/foto1.jpg">
-            </div>
-            <div class="col-lg-6 col-md-6 col-6">
-                <img src="../img/foto3.jpg">
-                <img src="../img/foto4.jpg">
-            </div>
-            <div class="col-lg-6 col-md-6 col-6">
-                <img src="../img/foto5.jpg">
-              <img src="../img/foto6.png">
-            </div>
-            <div class="col-lg-6 col-md-6 col-6">
-              <img src="../img/foto7.jpg">
-              <img src="../img/foto8.png">
-            </div>
-          </div>
-    </section>
+<!--SERVICIOS CLINICA DENTAL Y ESTETICA-->
+    <main>
+        <div class="formulario">
+            <form id="form" action="/">
+                <h1>REDENTAL</h1>
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" required>
+                </div>
+                <div class="input-control">
+                    <label for="password">Contraseña</label>
+                    <input id="pass" type="password" required>
+                </div>
+                <div class="botones">
+                    <button id="btn_registro">Registrate</button>
+                    <button id="btn_login">Ingresa</button>
+                </div>
+            </form>
+        </div>
+    </main>
 
+    <!--USO DE LIBRERÍA-->
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="../js/formulario.js" ></script>
 </body>
 
 <footer id="pie">
@@ -149,17 +118,4 @@
         </div>
     </div> 
 </footer>
-
-<script>
-    function showCart(x){
-        document.getElementById("products-id").style.display = "block";
-    }
-    function closeBtn(){
-         document.getElementById("products-id").style.display = "none";
-    }
-
-</script>
-
-<script src="../js/script.js"></script>
-
 </html>

@@ -116,64 +116,29 @@ function loadHtml(){
     containerBuyCart.innerHTML = '';
  }
 
+//CAPTURA INFORMACIÒN DE TODO EL FORMULARIO
 
-
- //REGISTRO DE USUARIO (PESTAÑA ACCEDE)
-let arr_usuarios =[];
-
-function alta_usuario(){
-    //let nombre_usuario = document.getElementById("nombre");
-    //let apellido_usuario = document.getElementById("apellido");
-    let correo_usuario = document.getElementById("correo");
-    let pass_usuario = document.getElementById("pass");
-
-    //console.log(nombre_usuario);
-    //console.log(apellido_usuario);
-    console.log(correo_usuario);
-    console.log(pass_usuario);
-
-    //ARREGLO USUARIO
-    let usuario={correo:corre_usuario.value , password:pass_usuario.value};
-
-    //CONVERSIÓN A JSON (STRING)
-    
-    arr_usuarios.push(usuario);
-    let arreglo_JSON =JSON.stringify(arr_usuarios);
-    localStorage.setItem("arr_usuarios" , arr_usuarios);
-
-
-    //RECUPERANDO USUARIOS
-    let recuperando_usuarios = localStorage.getItem("arr_usuarios");
-    recuperando_usuarios =json.parse(recuperando_usuarios);
-    console.log(recuperando_usuarios);
-}
-
-function login_usuario(){
-
-    let arr_usuarios =localStorage.getItem("arr_usuarios");
-
-    let correo_usuario = document.getElementById("correo");
-    let pass_usuario = document.getElementById("pass");
-
-    arr_usuarios = JSON.parse(arr_usuarios);
-
-    for (let usuario of arr_usuarios){
-
-        if(correo_usuario.value ==usuario.correo && pass_usuario.value ==usuario.password){
-            //DUDA, NO SE COMO REDIRECCIONAR
-            location.href = './index.html'
-            break;
-        }
-        else{
-            console.log("Usuario no registrado");
-        }
-    }
-}
-
+let arr_usuarios = [];
 
 let btn_registro= document.getElementById("btn_registro");
 let btn_login= document.getElementById("btn_login");
 
-btn_registro.addEventListener("click" ,alto_usuario );
+//FETCH CITAS
 
-btn_login.addEventListener("click" ,login_usuario);
+let quote = document.getElementById("quote");
+let author = document.getElementById("author");
+let btn_quote = document.getElementById("btn_quote");
+
+const url = "https://api.quotable.io/random";
+
+let getQuote = () => {
+  fetch(url)
+    .then((data) => data.json())
+    .then((item) => {
+      quote.innerText = item.content;
+      author.innerText = item.author;
+    });
+};
+
+window.addEventListener("load", getQuote);
+btn_quote.addEventListener("click", getQuote);
