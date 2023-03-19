@@ -78,11 +78,11 @@ header{
 }
 
 .cart-products{
+    background-color: white;
     z-index:+1;
     position: fixed;
     top: 0px;
     right: -10px;
-    background-color: #fff;
     padding: 0 18px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
     display: none;

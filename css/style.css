@@ -268,11 +268,11 @@ header {
 }
 
 .cart-products {
+  background-color: white;
   z-index: 1;
   position: fixed;
   top: 0px;
   right: -10px;
-  background-color: #fff;
   padding: 0 18px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   display: none;
@@ -502,19 +502,19 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
 }
-body main div {
+body .presentation div div {
   background-color: whitesmoke;
 }
-body main div div div img {
+body .presentation div div div img {
   max-width: 500px;
   width: 100%;
   max-height: 400px;
   height: 100%;
 }
-body section div {
+body .secciones div div {
   background-color: whitesmoke;
 }
-body section div div div img {
+body .secciones div div div img {
   max-width: 500px;
   width: 100%;
   max-height: 400px;
@@ -524,7 +524,7 @@ body section div div div img {
 .gallery .row {
   display: flex;
   overflow-wrap: normal;
-  padding: 0 4px;
+  padding: 4px;
   flex: 60%;
   padding-top: 10px;
 }
